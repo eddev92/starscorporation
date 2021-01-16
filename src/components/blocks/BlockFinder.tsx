@@ -9,6 +9,7 @@ import VehicleSelect from '~/components/shared/VehicleSelect';
 import { baseUrl } from '~/services/utils';
 import { hrefToRouterArgs, useAppRouter } from '~/services/router';
 import { IVehicle } from '~/interfaces/vehicle';
+import AppLink from '../shared/AppLink';
 
 function BlockFinder() {
     const router = useAppRouter();
@@ -17,17 +18,17 @@ function BlockFinder() {
     const onSubmit = (event: React.FormEvent) => {
         event.preventDefault();
 
-        if (!vehicle) {
-            return;
-        }
+        // if (!vehicle) {
+        //     return;
+        // }
 
-        router.push(
-            ...hrefToRouterArgs(url.products({
-                filters: {
-                    filter_vehicle: vehicle.id.toString(),
-                },
-            })),
-        ).then();
+        // router.push(
+        //     ...hrefToRouterArgs(url.products({
+        //         filters: {
+        //             filter_vehicle: vehicle.id.toString(),
+        //         },
+        //     })),
+        // ).then();
     };
 
     return (
@@ -45,10 +46,13 @@ function BlockFinder() {
                     <FormattedMessage id="TEXT_BLOCK_FINDER_SUBTITLE" />
                 </div>
                 <form className="block-finder__form" onSubmit={onSubmit}>
-                    <VehicleSelect className="block-finder__select" onVehicleChange={setVehicle} />
+                    {/* <VehicleSelect className="block-finder__select" onVehicleChange={setVehicle} /> */}
 
                     <button className="block-finder__button" type="submit">
-                        <FormattedMessage id="BUTTON_BLOCK_FINDER_SEARCH" />
+                        {/* <FormattedMessage id="BUTTON_BLOCK_FINDER_SEARCH" /> */}
+                        <a href="https://www.ciclotv.com/" target="_blank" className="topbar__link">
+                            <FormattedMessage id="BUTTON_BLOCK_FINDER_SEARCH" />
+                        </a>
                     </button>
                 </form>
             </div>

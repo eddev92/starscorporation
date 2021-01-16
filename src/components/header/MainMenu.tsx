@@ -11,6 +11,7 @@ import { IMainMenuLink } from '~/interfaces/main-menu-link';
 import { useOptions } from '~/store/options/optionsHooks';
 // data
 import dataHeaderMainMenu from '~/data/headerMainMenu';
+import { FormattedMessage } from 'react-intl';
 
 function MainMenu() {
     const items: IMainMenuLink[] = dataHeaderMainMenu;
@@ -49,40 +50,43 @@ function MainMenu() {
                     });
 
                     return (
-                        <li
-                            className={itemClasses}
-                            key={index}
-                            onMouseEnter={() => handleItemMouseEnter(item)}
-                            onMouseLeave={() => handleItemMouseLeave(item)}
-                        >
-                            <AppLink
-                                className="main-menu__link"
-                                href={item.url}
-                                onClick={handleItemClick}
-                                {...item.customFields?.anchorProps}
-                            >
-                                {item.title}
-                                {itemHasSubmenu && <ArrowDownSm7x5Svg />}
-                            </AppLink>
+                        <AppLink href="/" className="topbar__link">
+                            <FormattedMessage id="INIT" />
+                        </AppLink>
+                        // <li
+                        //     className={itemClasses}
+                        //     key={index}
+                        //     onMouseEnter={() => handleItemMouseEnter(item)}
+                        //     onMouseLeave={() => handleItemMouseLeave(item)}
+                        // >
+                        //     <AppLink
+                        //         className="main-menu__link"
+                        //         href={item.url}
+                        //         onClick={handleItemClick}
+                        //         {...item.customFields?.anchorProps}
+                        //     >
+                        //         {item.title}
+                        //         {itemHasSubmenu && <ArrowDownSm7x5Svg />}
+                        //     </AppLink>
 
-                            {itemHasSubmenu && (
-                                <div className="main-menu__submenu">
-                                    {item.submenu?.type === 'menu' && (
-                                        <Menu items={item.submenu.links} onItemClick={handleItemClick} />
-                                    )}
-                                    {item.submenu?.type === 'megamenu' && (
-                                        <div
-                                            className={classNames(
-                                                'main-menu__megamenu',
-                                                `main-menu__megamenu--size--${item.submenu.size}`,
-                                            )}
-                                        >
-                                            <Megamenu menu={item.submenu} onItemClick={handleItemClick} />
-                                        </div>
-                                    )}
-                                </div>
-                            )}
-                        </li>
+                        //     {itemHasSubmenu && (
+                        //         <div className="main-menu__submenu">
+                        //             {item.submenu?.type === 'menu' && (
+                        //                 <Menu items={item.submenu.links} onItemClick={handleItemClick} />
+                        //             )}
+                        //             {item.submenu?.type === 'megamenu' && (
+                        //                 <div
+                        //                     className={classNames(
+                        //                         'main-menu__megamenu',
+                        //                         `main-menu__megamenu--size--${item.submenu.size}`,
+                        //                     )}
+                        //                 >
+                        //                     <Megamenu menu={item.submenu} onItemClick={handleItemClick} />
+                        //                 </div>
+                        //             )}
+                        //         </div>
+                        //     )}
+                        // </li>
                     );
                 })}
             </ul>

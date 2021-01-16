@@ -31,7 +31,7 @@ const FooterNewsletter: FunctionComponent<React.HTMLAttributes<HTMLElement>> = (
                 <FormattedMessage id="TEXT_NEWSLETTER_MESSAGE" />
             </div>
 
-            <form className="footer-newsletter__form" onSubmit={handleFormSubmit}>
+            {/* <form className="footer-newsletter__form" onSubmit={handleFormSubmit}>
                 <label className="sr-only" htmlFor="footer-newsletter-address">
                     <FormattedMessage id="INPUT_EMAIL_ADDRESS_LABEL" />
                 </label>
@@ -47,7 +47,7 @@ const FooterNewsletter: FunctionComponent<React.HTMLAttributes<HTMLElement>> = (
                 >
                     <FormattedMessage id="BUTTON_SUBSCRIBE" />
                 </button>
-            </form>
+            </form> */}
 
             <div className="footer-newsletter__text footer-newsletter__text--social">
                 <FormattedMessage id="TEXT_SOCIAL_LINKS_MESSAGE" />

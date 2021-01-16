@@ -19,7 +19,13 @@ function WidgetFilters(props: Props) {
     const shopResetFilters = useShopResetFiltersThunk();
 
     const rootClasses = classNames('widget', 'widget-filters', `widget-filters--offcanvas--${offcanvasSidebar}`);
-
+    let auxFilters: any = [ ...filters ]
+    auxFilters.forEach((e: any, index: any) => {
+        if (e && e.type === 'radio') filters.splice(index, 1)
+        if (e && e.type === 'check') filters.splice(index, 1)
+        if (e && e.type === 'vehicle') filters.splice(index, 1)
+        if (e && e.type === 'rating') filters.splice(index, 1)
+    })
     return (
         <div className={rootClasses}>
             <div className="widget__header widget-filters__header">

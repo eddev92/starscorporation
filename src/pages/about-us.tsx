@@ -13,7 +13,7 @@ function Page() {
     return (
         <React.Fragment>
             <PageTitle>
-                About Us
+                Nosotros
             </PageTitle>
 
             <div className="about">
@@ -29,14 +29,11 @@ function Page() {
                     </div>
 
                     <div className="about__card">
-                        <div className="about__card-title">About Us</div>
+                        <div className="about__card-title">Nosotros</div>
                         <div className="about__card-text">
-                            RedParts is an international company with 30 years of history selling spare parts for cars,
-                            trucks and motorcycles.
-                            During our work we managed to create a unique service for the sale and delivery of spare
-                            parts around the world.
+                            Somos una empresa dedicada a la venta de equipos de protección personal y seguridad industrial, cumpliendo con los estándares y proveendo de productos de calidad con los mejores precios del mercado.
                         </div>
-                        <div className="about__card-author">Ryan Ford, CEO RedParts</div>
+                        <div className="about__card-author">Dirección General</div>
                         <div className="about__card-signature">
                             <AppImage src="/images/signature.jpg" width="160" height="55" />
                         </div>
@@ -45,16 +42,16 @@ function Page() {
                     <div className="about__indicators">
                         <div className="about__indicators-body">
                             <div className="about__indicators-item">
-                                <div className="about__indicators-item-value">350</div>
-                                <div className="about__indicators-item-title">Stores around the world</div>
+                                <div className="about__indicators-item-value">+30</div>
+                                <div className="about__indicators-item-title">Productos para ti</div>
                             </div>
                             <div className="about__indicators-item">
-                                <div className="about__indicators-item-value">80 000</div>
-                                <div className="about__indicators-item-title">Original auto parts</div>
+                                <div className="about__indicators-item-value">+100</div>
+                                <div className="about__indicators-item-title">Ventas concretadas en el último año </div>
                             </div>
                             <div className="about__indicators-item">
-                                <div className="about__indicators-item-value">5 000</div>
-                                <div className="about__indicators-item-title">Satisfied customers</div>
+                                <div className="about__indicators-item-value">+20</div>
+                                <div className="about__indicators-item-title">Clientes satisfechos</div>
                             </div>
                         </div>
                     </div>

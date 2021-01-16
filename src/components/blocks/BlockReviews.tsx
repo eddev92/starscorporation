@@ -20,11 +20,11 @@ function BlockReviews() {
     return (
         <div className="block block-reviews">
             <div className="container">
-                <div className="block-reviews__title">Testimonials</div>
+                <div className="block-reviews__title">Testimonios</div>
                 <div className="block-reviews__subtitle">
-                    During our work we have accumulated
+                    Algunas opiniones de
                     <br />
-                    hundreds of positive reviews.
+                    nuestros clientes.
                 </div>
                 <div className="block-reviews__list">
                     <AppSlick {...slickSettings}>

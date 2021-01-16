@@ -11,17 +11,12 @@ import theme from '~/data/theme';
 function Page() {
     return (
         <React.Fragment>
-            <PageTitle>Contact Us</PageTitle>
+            <PageTitle>Contáctanos</PageTitle>
 
             <BlockMap />
 
             <BlockHeader
-                pageTitle="Contact Us"
-                breadcrumb={[
-                    { title: 'Home', url: '' },
-                    { title: 'Breadcrumb', url: '' },
-                    { title: 'Current Page', url: '' },
-                ]}
+                pageTitle="Contáctanos"
                 afterHeader={false}
             />
 
@@ -32,28 +27,26 @@ function Page() {
                             <div className="row">
                                 <div className="col-12 col-lg-6 pb-4 pb-lg-0">
                                     <div className="mr-1">
-                                        <h4 className="contact-us__header card-title">Our Address</h4>
+                                        <h4 className="contact-us__header card-title">Oficina principal</h4>
 
                                         <div className="contact-us__address">
                                             <p>
-                                                715 Fake Ave, Apt. 34, New York, NY 10021 USA
+                                                Jr. Vulcano Mz B Lte 7, Urbanización La Libertard, Santiago de Surco - Lima, Perú
                                                 <br />
                                                 {`Email: ${theme.contacts.email[0]}`}
                                                 <br />
-                                                Phone Number: +1 754 000-00-00
+                                                Teléfonos: (+51) 994 381 708 - 963 763 193
                                             </p>
 
                                             <p>
-                                                <strong>Opening Hours</strong>
+                                                <strong>Horario de atención</strong>
                                                 <br />
-                                                Monday to Friday: 8am-8pm
+                                                Lunes a Viernes: 9am-6pm
                                                 <br />
-                                                Saturday: 8am-6pm
-                                                <br />
-                                                Sunday: 10am-4pm
+                                                Sábado: 9am-3pm
                                             </p>
 
-                                            <p>
+                                            {/* <p>
 
                                                 <strong>Comment</strong>
                                                 <br />
@@ -61,24 +54,24 @@ function Page() {
                                                 suscipit suscipit mi, non
                                                 tempor nulla finibus eget. Lorem ipsum dolor sit amet, consectetur
                                                 adipiscing elit.
-                                            </p>
+                                            </p> */}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="col-12 col-lg-6">
                                     <div className="ml-1">
-                                        <h4 className="contact-us__header card-title">Leave us a Message</h4>
+                                        <h4 className="contact-us__header card-title">Déjanos un mensaje</h4>
 
                                         <form>
                                             <div className="form-row">
                                                 <div className="form-group col-md-6">
-                                                    <label htmlFor="form-name">Your Name</label>
+                                                    <label htmlFor="form-name">Nombre</label>
                                                     <input
                                                         type="text"
                                                         id="form-name"
                                                         className="form-control"
-                                                        placeholder="Your Name"
+                                                        placeholder="Tu nombre o razón social"
                                                     />
                                                 </div>
                                                 <div className="form-group col-md-6">
@@ -87,28 +80,28 @@ function Page() {
                                                         type="email"
                                                         id="form-email"
                                                         className="form-control"
-                                                        placeholder="Email Address"
+                                                        placeholder="Email"
                                                     />
                                                 </div>
                                             </div>
                                             <div className="form-group">
-                                                <label htmlFor="form-subject">Subject</label>
+                                                <label htmlFor="form-subject">Asunto</label>
                                                 <input
                                                     type="text"
                                                     id="form-subject"
                                                     className="form-control"
-                                                    placeholder="Subject"
+                                                    placeholder="Asunto"
                                                 />
                                             </div>
                                             <div className="form-group">
-                                                <label htmlFor="form-message">Message</label>
+                                                <label htmlFor="form-message">Mensaje</label>
                                                 <textarea
                                                     id="form-message"
                                                     className="form-control"
                                                     rows={4}
                                                 />
                                             </div>
-                                            <button type="submit" className="btn btn-primary">Send Message</button>
+                                            <button type="submit" className="btn btn-primary">Enviar mensaje</button>
                                         </form>
                                     </div>
                                 </div>

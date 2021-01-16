@@ -10,7 +10,7 @@ import theme from '~/data/theme';
 function Page() {
     return (
         <React.Fragment>
-            <PageTitle>Contact Us</PageTitle>
+            <PageTitle>Contáctanos</PageTitle>
 
             <BlockHeader
                 pageTitle="Contact Us"

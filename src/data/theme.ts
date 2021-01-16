@@ -6,10 +6,10 @@ const theme = {
         profile_url: 'https://themeforest.net/user/kos9',
     },
     contacts: {
-        address: ['715 Fake Street, New York 10021 USA'],
-        email: ['red-parts@example.com'],
-        phone: ['+1 (800) 060-07-30'],
-        hours: ['Mon-Sat 10:00pm - 7:00pm'],
+        address: ['Jr Vulcano Mz B Lte 7 Urbanización La libertad, Santiago de surco'],
+        email: ['contactos@starscorporation.pe', 'ventas@starscorporation.pe'],
+        phone: ['(+51) 994-381-708', '(+51) 963 763 193'],
+        hours: ['Lun-Sab 9:00pm - 8:00pm'],
     },
 };
 

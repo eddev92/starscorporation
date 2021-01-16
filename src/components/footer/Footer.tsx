@@ -19,7 +19,7 @@ export function Footer() {
             <div className="site-footer__widgets">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-xl-4">
+                        <div className="col-12 col-xl-5">
                             <FooterContacts className="site-footer__widget" />
                         </div>
                         <div className="col-6 col-md-3 col-xl-2">
@@ -28,16 +28,16 @@ export function Footer() {
                                 header={<FormattedMessage id="HEADER_INFORMATION" />}
                                 links={[
                                     { title: <FormattedMessage id="LINK_ABOUT_US" /> },
-                                    { title: <FormattedMessage id="LINK_DELIVERY_INFORMATION" /> },
-                                    { title: <FormattedMessage id="LINK_PRIVACY_POLICY" /> },
-                                    { title: <FormattedMessage id="LINK_BRANDS" /> },
+                                    // { title: <FormattedMessage id="LINK_DELIVERY_INFORMATION" /> },
+                                    // { title: <FormattedMessage id="LINK_PRIVACY_POLICY" /> },
+                                    // { title: <FormattedMessage id="LINK_BRANDS" /> },
                                     { title: <FormattedMessage id="LINK_CONTACT_US" /> },
-                                    { title: <FormattedMessage id="LINK_RETURNS" /> },
-                                    { title: <FormattedMessage id="LINK_SITE_MAP" /> },
+                                //     { title: <FormattedMessage id="LINK_RETURNS" /> },
+                                //     { title: <FormattedMessage id="LINK_SITE_MAP" /> },
                                 ]}
                             />
                         </div>
-                        <div className="col-6 col-md-3 col-xl-2">
+                        {/* <div className="col-6 col-md-3 col-xl-2">
                             <FooterLinks
                                 className="site-footer__widget"
                                 header={<FormattedMessage id="HEADER_MY_ACCOUNT" />}
@@ -51,7 +51,7 @@ export function Footer() {
                                     { title: <FormattedMessage id="LINK_AFFILIATE" /> },
                                 ]}
                             />
-                        </div>
+                        </div> */}
                         <div className="col-12 col-md-6 col-xl-4">
                             <FooterNewsletter className="site-footer__widget" />
                         </div>
@@ -63,14 +63,9 @@ export function Footer() {
                     <div className="site-footer__bottom-row">
                         <div className="site-footer__copyright">
                             {/* copyright */}
-                            {'Powered by '}
-                            <AppLink href="https://reactjs.org/" target="_blank" rel="noreferrer">React</AppLink>
-                            {' / '}
-                            <AppLink href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</AppLink>
-                            {' — Designed by '}
-                            <AppLink href={theme.author.profile_url} target="_blank" rel="noreferrer">
-                                {theme.author.name}
-                            </AppLink>
+                            {'Desarrollado por '}
+                            <AppLink href="https://reactjs.org/" target="_blank" rel="noreferrer">Stars Corporation</AppLink>
+                           
                             {/* copyright / end */}
                         </div>
                         <div className="site-footer__payments">

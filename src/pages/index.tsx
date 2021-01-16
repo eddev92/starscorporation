@@ -16,6 +16,7 @@ import BlockZone from '~/components/blocks/BlockZone';
 import url from '~/services/url';
 import { shopApi, blogApi } from '~/api';
 import { useDeferredData, useProductColumns, useProductTabs } from '~/services/hooks';
+import BlockCategories from '~/components/blocks/BlockCategories';
 
 function Page() {
     const intl = useIntl();
@@ -89,13 +90,27 @@ function Page() {
             },
         ], []),
     );
-
+    const popularCategories = useDeferredData(() => shopApi.getCategories({
+        slugs: [
+            'headlights-lighting',
+            'fuel-system',
+            'body-parts',
+            'interior-parts',
+            'tires-wheels',
+            'engine-drivetrain',
+        ],
+        depth: 1,
+    }), []);
     return (
         <React.Fragment>
             <BlockFinder />
-            {/* <BlockFeatures layout="top-strip" />
             <BlockSpace layout="divider-nl" />
-            <BlockProductsCarousel
+            {/* <BlockCategories
+                blockTitle={intl.formatMessage({ id: 'HEADER_POPULAR_CATEGORIES' })}
+                categories={popularCategories.data}
+            /> */}
+            <BlockFeatures layout="top-strip" />
+            {/* <BlockProductsCarousel
                 blockTitle={intl.formatMessage({ id: 'HEADER_FEATURED_PRODUCTS' })}
                 layout="grid-5"
                 loading={featuredProducts.isLoading}
@@ -103,7 +118,10 @@ function Page() {
                 groups={featuredProducts.tabs}
                 currentGroup={featuredProducts.tabs.find((x) => x.current)}
                 onChangeGroup={featuredProducts.handleTabChange}
-            />
+            /> */}
+            {/* 
+            
+            
             <BlockSpace layout="divider-nl" />
             <BlockSale
                 products={blockSale.data}

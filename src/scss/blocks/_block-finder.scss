@@ -70,7 +70,11 @@ $local-control-gutter: 14px;
 .block-finder__select {
     width: 100%;
 }
+.topbar__link {
+    color: white !important;
+}
 .block-finder__button {
+    margin: auto;
     height: 44px;
     min-height: 44px;
     border-radius: 2px;

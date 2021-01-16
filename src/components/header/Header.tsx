@@ -65,9 +65,9 @@ function Header() {
             )}
 
             <div className="header__navbar">
-                <div className="header__navbar-departments">
+                {/* <div className="header__navbar-departments">
                     <Departments label={departmentsLabel} />
-                </div>
+                </div> */}
                 <div className=" header__navbar-menu">
                     <MainMenu />
                 </div>
@@ -83,9 +83,9 @@ function Header() {
                 )}
             </div>
             <Logo className="header__logo" />
-            <div className="header__search">
+            {/* <div className="header__search">
                 <Search />
-            </div>
+            </div> */}
             <div className="header__indicators">
                 {/* <Indicator
                     href={url.wishlist()}

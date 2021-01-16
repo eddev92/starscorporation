@@ -11,8 +11,8 @@ const slickSettings: ISlickProps = {
     arrows: false,
     infinite: true,
     speed: 400,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     responsive: [
         {
             breakpoint: 1199,
@@ -46,14 +46,15 @@ const slickSettings: ISlickProps = {
 };
 
 function BlockTeammates() {
+    console.log(dataSiteTeammates)
     return (
         <div className="block block-teammates">
             <div className="container container--max--xl">
-                <div className="block-teammates__title">Professional Team</div>
-                <div className="block-teammates__subtitle">Meet this is our professional team.</div>
+                <div className="block-teammates__title">Nuestro Equipo</div>
+                <div className="block-teammates__subtitle">Conoce cada talento que hace esto realidad.</div>
                 <div className="block-teammates__list">
                     <AppSlick {...slickSettings}>
-                        {dataSiteTeammates.map((teammate, index) => (
+                        {dataSiteTeammates.map((teammate, index) =>
                             <div key={index} className="block-teammates__item teammate">
                                 <div className="teammate__avatar">
                                     <AppImage src={teammate.avatar} />
@@ -63,7 +64,7 @@ function BlockTeammates() {
                                     <div className="teammate__position">{teammate.position}</div>
                                 </div>
                             </div>
-                        ))}
+                        )}
                     </AppSlick>
                 </div>
             </div>

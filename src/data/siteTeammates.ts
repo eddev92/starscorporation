@@ -1,29 +1,19 @@
 const dataSiteTeammates = [
     {
-        name: 'Michael Russo',
-        position: 'Chief Executive Officer',
+        name: 'Diego Lizárraga',
+        position: 'Gerente General',
         avatar: '/images/teammates/teammate1.jpg',
     },
     {
-        name: 'Samantha Smith',
-        position: 'Account Manager',
+        name: 'Edward Llanca',
+        position: 'Gerente de operaciones',
         avatar: '/images/teammates/teammate2.jpg',
     },
     {
-        name: 'Anthony Harris',
-        position: 'Finance Director',
+        name: 'xxxx xxxx',
+        position: 'yyy yyy yy',
         avatar: '/images/teammates/teammate3.jpg',
-    },
-    {
-        name: 'Katherine Miller',
-        position: 'Marketing Officer',
-        avatar: '/images/teammates/teammate4.jpg',
-    },
-    {
-        name: 'Boris Gilmore',
-        position: 'Engineer',
-        avatar: '/images/teammates/teammate5.jpg',
-    },
+    }
 ];
 
 export default dataSiteTeammates;
