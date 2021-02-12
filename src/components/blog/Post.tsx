@@ -12,6 +12,12 @@ import { ArrowRoundedLeft7x11Svg, ArrowRoundedRight7x11Svg } from '~/svg';
 // data
 import dataBlogComments from '~/data/blogComments';
 import dataBlogPosts from '~/data/blogPosts';
+import { Tabs } from 'antd';
+import { Card, Avatar } from 'antd';
+import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+
+const { Meta } = Card;
+const { TabPane } = Tabs;
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> { }
 
@@ -24,6 +30,38 @@ function Post(props: Props) {
         <div className={rootClasses} {...rootProps}>
             <div className="post-view__card post">
                 <div className="post__body typography">
+                    <Tabs defaultActiveKey="1" centered>
+                        <TabPane tab="PLATOS" key="1">                        
+                            <Card
+                                style={{ width: 300 }}
+                                cover={
+                                <img
+                                    alt="example"
+                                    src="https://cdn.cuponidad.pe/images/Deals/Buffet-Bolivar4.jpg"
+                                />
+                                }
+                                actions={[
+                                <SettingOutlined key="setting" />,
+                                <EditOutlined key="edit" />,
+                                <EllipsisOutlined key="ellipsis" />,
+                                ]}
+                            >
+                                <Meta
+                                avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                                title="POLLITO CHINEX"
+                                description="Su pollaso + sus papas y su seca ...S/ 75.00 "
+                                />
+                            </Card>
+                        </TabPane>
+                        <TabPane tab="COMBOS" key="2">
+                        COMBOS
+                        </TabPane>
+                        <TabPane tab="BEBIDAS" key="3">
+                        BEBIDAS
+                        </TabPane>
+                    </Tabs>
+                </div>
+                {/* <div className="post__body typography">
                     <p>
                         Vestibulum sagittis justo sit amet nisl semper, et pulvinar elit maximus. Morbi interdum velit
                         quis magna placerat lobortis
@@ -129,40 +167,16 @@ function Post(props: Props) {
                         Donec risus nisi, aliquet a
                         commodo ac, elementum vitae leo.
                     </p>
-                </div>
+                </div> */}
 
-                <div className="post__pagination">
-                    <div className="post__pagination-title">
-                        Pages
-                    </div>
-                    <div className="post__pagination-list">
-                        <ul>
-                            <li><span className="post__pagination-link post__pagination-link--current">1</span></li>
-                            <li><AppLink href="/" className="post__pagination-link">2</AppLink></li>
-                            <li><AppLink href="/" className="post__pagination-link">3</AppLink></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="post__footer">
-                    <div className="post__tags tags tags--sm">
-                        <div className="tags__list">
-                            <AppLink href="/">Promotion</AppLink>
-                            <AppLink href="/">Power Tool</AppLink>
-                            <AppLink href="/">Wrench</AppLink>
-                            <AppLink href="/">Electrodes</AppLink>
-                        </div>
-                    </div>
-                    <ShareLinks className="post__share-links" />
-                </div>
-
+             
                 <div className="post__author">
                     <div className="post__author-avatar">
                         <AppImage src="/images/avatars/avatar-4.jpg" />
                     </div>
                     <div className="post__author-info">
                         <div className="post__author-name">
-                            Ryan Ford
+                            OFERTA DEL DIA
                         </div>
                         <div className="post__author-about">
                             Aliquam ullamcorper elementum sagittis. Etiam lacus lacus, mollis in mattis in, vehicula eu
@@ -170,115 +184,8 @@ function Post(props: Props) {
                             pellentesque.
                         </div>
                     </div>
+                    
                 </div>
-            </div>
-
-            <div className="post-view__card post-navigation">
-                <div className="post-navigation__body">
-                    <AppLink href="/" className="post-navigation__item post-navigation__item--prev">
-                        <div className="post-navigation__item-image">
-                            <AppImage src={dataBlogPosts[1].image} />
-                        </div>
-                        <div className="post-navigation__item-info">
-                            <div className="post-navigation__direction">
-                                <div className="post-navigation__direction-arrow">
-                                    <ArrowRoundedLeft7x11Svg />
-                                </div>
-                                <div className="post-navigation__direction-title">
-                                    Previous post
-                                </div>
-                            </div>
-                            <div className="post-navigation__item-title">
-                                {dataBlogPosts[1].title}
-                            </div>
-                        </div>
-                    </AppLink>
-
-                    <AppLink href="/" className="post-navigation__item post-navigation__item--next">
-                        <div className="post-navigation__item-info">
-                            <div className="post-navigation__direction">
-                                <div className="post-navigation__direction-title">
-                                    Next post
-                                </div>
-                                <div className="post-navigation__direction-arrow">
-                                    <ArrowRoundedRight7x11Svg />
-                                </div>
-                            </div>
-                            <div className="post-navigation__item-title">
-                                {dataBlogPosts[2].title}
-                            </div>
-                        </div>
-                        <div className="post-navigation__item-image">
-                            <AppImage src={dataBlogPosts[2].image} />
-                        </div>
-                    </AppLink>
-                </div>
-            </div>
-
-            <div className="post-view__card">
-                <h2 className="post-view__card-title">
-                    Comments (
-                    {dataBlogComments.count}
-                    )
-                </h2>
-
-                <div className="post-view__card-body comments-view">
-                    <CommentsList
-                        className="comments-view__list"
-                        comments={dataBlogComments.items}
-                    />
-
-                    <div className="comments-view__pagination">
-                        <Pagination current={1} siblings={2} total={3} />
-                    </div>
-                </div>
-            </div>
-
-            <div className="post-view__card">
-                <h2 className="post-view__card-title">Write A Comment</h2>
-
-                <form className="post-view__card-body">
-                    <div className="form-row">
-                        <div className="form-group col-md-4">
-                            <label htmlFor="comment-first-name">First Name</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="comment-first-name"
-                                placeholder="First Name"
-                            />
-                        </div>
-                        <div className="form-group col-md-4">
-                            <label htmlFor="comment-last-name">Last Name</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="comment-last-name"
-                                placeholder="Last Name"
-                            />
-                        </div>
-                        <div className="form-group col-md-4">
-                            <label htmlFor="comment-email">Email Address</label>
-                            <input
-                                type="email"
-                                className="form-control"
-                                id="comment-email"
-                                placeholder="Email Address"
-                            />
-                        </div>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="comment-content">Comment</label>
-                        <textarea
-                            className="form-control"
-                            id="comment-content"
-                            rows={6}
-                        />
-                    </div>
-                    <div className="form-group mb-0">
-                        <button type="submit" className="btn btn-primary mt-md-4 mt-2">Post Comment</button>
-                    </div>
-                </form>
             </div>
         </div>
     );

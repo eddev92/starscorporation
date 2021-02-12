@@ -351,3 +351,15 @@
 
 
 @import 'custom';
+
+// STYLES AUX
+.ant-card-grid:hover {
+  background-color: #1a78bd;
+  color: white;
+}
+.document__content {
+  padding: 0 !important;
+}
+#card-product {
+  width: 202px !important;
+}

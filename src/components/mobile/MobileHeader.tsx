@@ -118,7 +118,7 @@ function MobileHeader() {
                         })}
                     >
                         <form className="mobile-search__body" onSubmit={onSearchSubmit}>
-                            <label className="sr-only" htmlFor="mobile-site-search">
+                            {/* <label className="sr-only" htmlFor="mobile-site-search">
                                 <FormattedMessage id="INPUT_SEARCH_LABEL" />
                             </label>
                             <input
@@ -127,7 +127,7 @@ function MobileHeader() {
                                 id="mobile-site-search"
                                 className="mobile-search__input"
                                 placeholder={searchPlaceholder}
-                            />
+                            /> */}
                             {/* <button
                                 type="button"
                                 className="mobile-search__vehicle-picker"
@@ -138,7 +138,7 @@ function MobileHeader() {
                                     <FormattedMessage id="BUTTON_SEARCH_SELECT_VEHICLE_MOBILE" />
                                 </span>
                             </button> */}
-                            <button type="submit" className="mobile-search__button mobile-search__button--search">
+                            {/* <button type="submit" className="mobile-search__button mobile-search__button--search">
                                 <Search20Svg />
                             </button>
                             <button
@@ -148,7 +148,7 @@ function MobileHeader() {
                             >
                                 <Cross20Svg />
                             </button>
-                            <div className="mobile-search__field" />
+                            <div className="mobile-search__field" /> */}
                         </form>
                     </div>
                     <div className="mobile-header__indicators">

@@ -13,6 +13,9 @@
             display: block;
         }
     }
+    .mobile-logo img {
+        height: 50px;
+    }
     .mobile-logo__part-one {
         fill: map_get($logo-scheme, primary);
     }

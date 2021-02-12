@@ -18,6 +18,7 @@ import { optionsSetAll } from '~/store/options/optionsActions';
 import { useApplyClientState } from '~/store/client';
 import { useLoadUserVehicles } from '~/store/garage/garageHooks';
 // styles
+import 'antd/dist/antd.css';
 import '../scss/index.scss';
 import '../scss/style.header-spaceship-variant-one.scss';
 import '../scss/style.header-spaceship-variant-two.scss';
@@ -64,12 +65,20 @@ function App(props: Props) {
 
     // preloader
     useEffect(() => {
+        const url: any = window.location.href;
+        console.log(window.location.href)
         const preloader = document.querySelector('.site-preloader');
-
+        console.log(url.search("/demo/blog/post-full-width") )
+        if (url && url.search("/demo/blog/post-full-width") != -1) {
+            const headerObj: any = document.querySelector('.site__header');
+            const headerObjMobile: any = document.querySelector('.site__mobile-header');
+            if (headerObj) headerObj.remove()
+            if (headerObjMobile) headerObjMobile.remove()
+        }
         if (!preloader) {
             return;
         }
-
+        
         setTimeout(() => {
             if (preloader.parentNode) {
                 preloader.parentNode.removeChild(preloader);

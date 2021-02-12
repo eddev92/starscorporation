@@ -30,7 +30,7 @@
     background-size: cover;
     background-position: center center;
     z-index: -1;
-    opacity: .22;
+    // opacity: .22;
 }
 .post-header__body {
     max-width: 620px;
@@ -129,10 +129,10 @@ $local-categories-gutter: 6px;
 
 .post-header--has-image {
     background: $post-header-overlay-bg-color;
-
     @mixin local-height($header-height, $image-height) {
         margin-bottom: -($image-height - $header-height);
         padding-bottom: $image-height - $header-height;
+        padding: 210px !important;
     }
 
     @include local-height(350px, 500px);

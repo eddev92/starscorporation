@@ -30,15 +30,15 @@ function BlogPageCategory(props: Props) {
 
     return (
         <React.Fragment>
-            <PageTitle>Latest News</PageTitle>
+            <PageTitle>CATALOGO 2021</PageTitle>
 
             <BlockHeader
-                pageTitle="Latest News"
-                breadcrumb={[
-                    { title: 'Home', url: '' },
-                    { title: 'Breadcrumb', url: '' },
-                    { title: 'Current Page', url: '' },
-                ]}
+                pageTitle="NUESTRO CATALOGO"
+                // breadcrumb={[
+                //     { title: 'Home', url: '' },
+                //     { title: 'Breadcrumb', url: '' },
+                //     { title: 'Current Page', url: '' },
+                // ]}
             />
 
             <div className={`block blog-view blog-view--layout--${layout}`}>
@@ -46,19 +46,21 @@ function BlogPageCategory(props: Props) {
                     <div className="blog-view__body">
                         {sidebarPosition === 'start' && (
                             <div className="blog-view__item blog-view__item-sidebar">
-                                <BlogSidebar />
+                                {/* <BlogSidebar /> */}
+                                <div>MENU</div>
                             </div>
                         )}
                         <div className="blog-view__item blog-view__item-posts">
                             <div className="block posts-view">
-                                <div
+                                produc
+                                {/*<div
                                     className={classNames('posts-view__list', 'posts-list', {
                                         'posts-list--layout--classic': layout === 'classic',
                                         'posts-list--layout--list': layout === 'list',
                                         'posts-list--layout--grid-2': layout === 'grid',
                                     })}
                                 >
-                                    <div className="posts-list__body">
+                                     <div className="posts-list__body">
                                         {dataBlogPosts.map((post, index) => (
                                             <div key={index} className="posts-list__item">
                                                 <PostCard
@@ -68,10 +70,10 @@ function BlogPageCategory(props: Props) {
                                             </div>
                                         ))}
                                     </div>
-                                </div>
-                                <div className="posts-view__pagination">
+                                </div> */}
+                                {/* <div className="posts-view__pagination">
                                     <Pagination current={page} siblings={1} total={3} onPageChange={setPage} />
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         {sidebarPosition === 'end' && (

@@ -50,7 +50,7 @@ function BlockFinder() {
 
                     <button className="block-finder__button" type="submit">
                         {/* <FormattedMessage id="BUTTON_BLOCK_FINDER_SEARCH" /> */}
-                        <a href="https://www.ciclotv.com/" target="_blank" className="topbar__link">
+                        <a href="/demo/blog/classic-left-sidebar" className="topbar__link">
                             <FormattedMessage id="BUTTON_BLOCK_FINDER_SEARCH" />
                         </a>
                     </button>

@@ -30,12 +30,12 @@ function BlogPagePost(props: Props) {
                     {featuredImage && (
                         <div
                             className="post-header__image"
-                            style={{ backgroundImage: `url(${baseUrl('/images/posts/post-1.jpg')})` }}
+                            style={{ backgroundImage: `url(${baseUrl('/images/posts/catalogo-rey.jpg')})` }}
                         />
                     )}
 
                     <div className="post-header__body">
-                        <div className="post-header__categories">
+                        {/* <div className="post-header__categories">
                             <ul className="post-header__categories-list">
                                 <li className="post-header__categories-item">
                                     <AppLink href="/" className="post-header__categories-link">
@@ -43,22 +43,22 @@ function BlogPagePost(props: Props) {
                                     </AppLink>
                                 </li>
                             </ul>
-                        </div>
-                        <h1 className="post-header__title">Morbi Interdum Velit Quis Magna Placerat Lobortis Eget</h1>
+                        </div> */}
+                        {/* <h1 className="post-header__title">Catálogo Prueba</h1> */}
                         <div className="post-header__meta">
                             <ul className="post-header__meta-list">
-                                <li className="post-header__meta-item">
+                                {/* <li className="post-header__meta-item">
                                     {'By '}
                                     <AppLink href="/" className="post-header__meta-link">
                                         Jessica Moore
                                     </AppLink>
-                                </li>
-                                <li className="post-header__meta-item">November 30, 2018</li>
-                                <li className="post-header__meta-item">
+                                </li> */}
+                                {/* <li className="post-header__meta-item">Enero 30, 2021</li> */}
+                                {/* <li className="post-header__meta-item">
                                     <AppLink href="/" className="post-header__meta-link">
                                         4 Comments
                                     </AppLink>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </div>
