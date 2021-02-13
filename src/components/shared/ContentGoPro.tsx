@@ -1,47 +1,52 @@
-// react
-import React from 'react';
+// react,
+import React, { useState } from 'react';
 // application
-import { Card } from 'antd';
+import { Card, Row, Col, Button, Modal } from 'antd';
 import url from '~/services/url';
 import { AccesoriesGoPRo } from '~/data/gopro';
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 
 const gridStyle = {
-  minWidth: '33.3%',
+  maxWidth: '30%',
   textAlign: 'center',
-  border: '1px solid #ee791f'
+  border: '1px solid #ee791f',
+  // margin: '14px',
 };
 const { Meta } = Card;
-function ContentGoProShop() {
-  const openModal = (el) => {
-    console.log('open modal', el)
-  }
+function ContentGoProShop({ openModal = () => {} }: any) {
+  // const openModal = (el: any) => {
+  //   console.log('open modal', el)
+  // }
     return (
         <React.Fragment>
-          <Card>
-                        {
+          <Row>
+          {
                           AccesoriesGoPRo && AccesoriesGoPRo.map(el => {
-                            return  <Card.Grid style={gridStyle}>
-                              <Card
-                              id="card-product"
-                                  style={{ width: 300 }}
-                                  cover={
-                                    <img
-                                      alt="example"
-                                      src={(el && el.img) && el.img}
+                            return (
+                              <Col span={8}>
+                                 <Card
+                                    hoverable
+                                    id="card-product"
+                                    style={{ width: 300 }}
+                                    cover={
+                                      <img
+                                        alt="example"
+                                        src={(el && el.img) && el.img}
+                                        className="img-responsive"
+                                      />
+                                    }
+                                    >
+                                    <Meta
+                                      title={el.name}
+                                      description={`Precio de...  S/ ${el.price}`}
                                     />
-                                  }
-                                  >
-                                  <Meta
-                                    title={el.name}
-                                    description={`Precio de...  S/ ${el.price}`}
-                                  />
-                                  <button onClick={() => openModal(el)}>PEDIR</button>
-                              </Card>
-                            </Card.Grid>
+                                    <Button type="primary" size="large" onClick={() => openModal(el)}>PEDIR</Button>
+                                </Card>
+                              </Col>                             
+                              )
                           })
                         }
-          </Card>
+          </Row>                        
         </React.Fragment>
     );
 }

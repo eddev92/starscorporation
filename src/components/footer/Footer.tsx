@@ -64,13 +64,13 @@ export function Footer() {
                         <div className="site-footer__copyright">
                             {/* copyright */}
                             {'Desarrollado por '}
-                            <AppLink href="https://reactjs.org/" target="_blank" rel="noreferrer">Stars Corporation</AppLink>
+                            <AppLink href="https://starscorporation.pe" target="_blank" rel="noreferrer">Stars Corporation </AppLink>
                            
-                            {/* copyright / end */}
+                            copyright ©️ 2020-2021
                         </div>
-                        <div className="site-footer__payments">
+                        {/* <div className="site-footer__payments">
                             <AppImage src="/images/payments.png" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
