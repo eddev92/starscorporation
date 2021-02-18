@@ -151,7 +151,7 @@ function MobileHeader() {
                             <div className="mobile-search__field" /> */}
                         </form>
                     </div>
-                    <div className="mobile-header__indicators">
+                    {/* <div className="mobile-header__indicators">
                         <div className="mobile-indicator d-md-none" ref={searchIndicatorRef}>
                             <button type="button" className="mobile-indicator__button" onClick={openSearch}>
                                 <span className="mobile-indicator__icon">
@@ -191,6 +191,7 @@ function MobileHeader() {
                             </AppLink>
                         </div>
                     </div>
+                 */}
                 </div>
             </div>
         </div>

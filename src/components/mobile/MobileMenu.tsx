@@ -50,9 +50,9 @@ function MobileMenu() {
 
                 <MobileMenuConveyor controllerRef={conveyorRef}>
                     <MobileMenuPanel label="Menu">
-                        <MobileMenuSettings />
+                        {/* <MobileMenuSettings />
                         <div className="mobile-menu__divider" />
-                        <MobileMenuIndicators />
+                        <MobileMenuIndicators /> */}
                         <div className="mobile-menu__divider" />
                         <MobileMenuLinks items={dataMobileMenuLinks} />
 
@@ -62,7 +62,7 @@ function MobileMenu() {
                             <div className="mobile-menu__contacts-subtitle">
                                 <FormattedMessage id="TEXT_MOBILE_MENU_PHONE_TITLE" />
                             </div>
-                            <div className="mobile-menu__contacts-title">800 060-0730</div>
+                            <div className="mobile-menu__contacts-title">994 381 708</div>
                         </AppLink>
                     </MobileMenuPanel>
                 </MobileMenuConveyor>

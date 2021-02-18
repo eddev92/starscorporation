@@ -83,6 +83,7 @@ const url = {
     pageContactUs: () => '/contact-us',
     pageStoreLocation: () => '/',
     pageTerms: () => '/terms',
+    pageGoPro: () => '/gopro',
 };
 
 export default url;

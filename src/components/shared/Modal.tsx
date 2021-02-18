@@ -2,12 +2,14 @@ import React from 'react';
 import { Modal } from 'antd';
 import { Form, Input, Button, InputNumber, Card, Row, Col, Table, Tag, Space } from 'antd';
 const { Meta } = Card
-function ModalComponent({ finalOrder, productSelected, visible, setVisible = () =>{}, state = false, closeModal = () =>{}, onFinishFailed = () =>{}, onFinish = () =>{},
-tailLayout, layout }: any) {
+
+function ModalComponent({ productSelected = {}, visible = false, closeModal = () => {}, onFinishFailed = () =>{}, onFinish = () =>{},
+tailLayout, layout }: any): any {
   console.log(productSelected)
   if (productSelected) {
     return (
       <Modal
+      destroyOnClose={true}
         title={(productSelected && productSelected.name) && productSelected.name.toUpperCase()}
         centered
         visible={visible}
@@ -48,7 +50,7 @@ tailLayout, layout }: any) {
           <Form
       {...layout}
       name="basic"
-      initialValues={{ remember: true }}
+      // initialValues={{remember: true}}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
@@ -57,8 +59,7 @@ tailLayout, layout }: any) {
                 name="fullNames"
                 rules={[{ required: true, message: 'Nombres y apellidos son requeridos' }]}
               >
-                <Input 
-                value={onFinishFailed.fullName}
+                <Input
                 />
               </Form.Item>
               <Form.Item
@@ -77,7 +78,7 @@ tailLayout, layout }: any) {
               </Form.Item>
               <Form.Item
                 label="Dirección de envío"
-                name="username"
+                name="address"
                 rules={[{ required: true, message: 'Dirección de envío es requerido' }]}
               >
                 <Input />
@@ -89,7 +90,7 @@ tailLayout, layout }: any) {
             <span className="ant-form-text"> unidades</span>
           </Form.Item>
               <Form.Item name={['clientComment', 'comment']} label="Comentario:">
-                <Input.TextArea />
+                <Input.TextArea value={productSelected.comment} />
               </Form.Item>
               <Form.Item {...tailLayout}>
                 TOTAL:
